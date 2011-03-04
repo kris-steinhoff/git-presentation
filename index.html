@@ -13,9 +13,13 @@ h2 {
 }
 
 code {
-    background: #dddddd;
-    border: 1px dotted #555555;
-    padding: .5em;
+    font-weight: bold;
+    font-size: 1.1em;
+    background: #ffe3df;
+    border: 1px solid #ffe3df;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    padding: 0 3px 0 3px;
 }
 
 
@@ -32,27 +36,42 @@ code {
 <blockquote>Git is an open source, distributed version control system  designed to handle everything from small to very large projects with speed and efficiency. Every Git clone is a full-fledged repository with complete history and full revision tracking capabilities, not dependent on network access or a central server. Branching and merging are fast and easy to do.</blockquote>
 
 <h2>Creating a Repository</h2>
-<code>git init</code>
-<p>turns the current directory into a git repository.</p>
 
+<p>Turn your the current directory into a git repository: <code>git init</code></p>
+
+<p>Or, clone a remote repository: <code>git clone git://github.com/ksteinhoff/git-presentation.git</code></p>
 <h2>Commiting Changes</h2>
 
-<code>git commit -a</code>
+<p>Add files to your staging area: <code>git add</code></p>
 
-<p>commits all of the changes you've made. But git can be more flexible than this with the staging area.</p>
+<p>Commit changes in your staging area to your repository: <code>git commit</code></p>
 
-<code>git add</code>
-
-<p>adds files to your staging area.</p>
-
-<code>git commit</code> 
-
-<p>commits changes in your staging area to your repository.</p>
-
+<p>Commit all of the changes you've made to tracked files (files that are not already tracked must be added with "git add"): <code>git commit -a</code></p>
 
 <h2>Working With a Cloned Repository</h2>
 
 <p><img src="http://whygitisbetterthanx.com/images/local-remote.png" /><br />(<a href="http://whygitisbetterthanx.com/#everything-is-local">http://whygitisbetterthanx.com/#everything-is-local</a>)</p>
+
+<h2>Pulling and Pushing</h2>
+
+<p><code>git pull</code> will pull commits from the repo repository and merge the changes from the remote branch in to the your branch.</p>
+
+<p>If you have write access to the remote repository you cloned from, you can push your commits to it: <code>git push</code></p>
+
+<p>If you're working in a cloned repository, the default branch (usually "master") will already be setup to work with "git push" and "git pull".
+
+<h2>Branching</h2>
+
+<p>Create a new branch (based on your currently checked out branch) called "testing": <code>git branch testing</code></p>
+
+<p>Check out the "testing" branch: <code>git checkout testing</code> This changes files in your working directory.</p>
+
+<p>Create a branch called "develop" that tracks the "develop" branch in remote repository "origin" and check it out: <code>git checkout -b develop origin/develop</code></p>
+
+<h2>Merging</h2>
+
+<p>To merge the commits in the "testing" branch into the "develop", first checkout the "develop" branch: <code>git checkout develop</code> then do the merge: <code>git merge testing</code></p>
+
 
 <h2>Workflow</h2>
 
