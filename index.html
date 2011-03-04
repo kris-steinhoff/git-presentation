@@ -5,23 +5,22 @@
 <style type="text/css">
 body {
     font-family: Verdana, sans-serif;
-    font-size: 2em;
 }
 
 h2 {
-    font-size: 1.1em;
 }
 
 code {
     font-weight: bold;
-    font-size: 1.1em;
     background: #ffe3df;
     border: 1px solid #ffe3df;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     padding: 0 3px 0 3px;
 }
-
+ul#resources li {
+    margin-bottom: 20px;
+}
 
 </style>
 
@@ -46,11 +45,11 @@ code {
 
 <p>Commit changes in your staging area to your repository: <code>git commit</code></p>
 
-<p>Commit all of the changes you've made to tracked files (files that are not already tracked must be added with "git add"): <code>git commit -a</code></p>
+<p>Commit all of the changes you've made to tracked files: <code>git commit -a</code> (files that are not already tracked must be added with "git add")</p>
 
 <h2>Working With a Cloned Repository</h2>
 
-<p><img src="http://whygitisbetterthanx.com/images/local-remote.png" /><br />(<a href="http://whygitisbetterthanx.com/#everything-is-local">http://whygitisbetterthanx.com/#everything-is-local</a>)</p>
+<p><img style="width: 600px;" src="http://whygitisbetterthanx.com/images/local-remote.png" /><br />(<a href="http://whygitisbetterthanx.com/#everything-is-local">http://whygitisbetterthanx.com/#everything-is-local</a>)</p>
 
 <h2>Pulling and Pushing</h2>
 
@@ -73,19 +72,28 @@ code {
 <p>To merge the commits in the "testing" branch into the "develop", first checkout the "develop" branch: <code>git checkout develop</code> then do the merge: <code>git merge testing</code></p>
 
 
-<h2>Workflow</h2>
+<h2>Branching and workflow models</h2>
 
-<p>The <a href="http://nvie.com/posts/a-successful-git-branching-model/">git flow</a> work flow model codifies a useful approach to working with other developers on the same project.</p>
+<p>Since git is distributed, it lends itself to many different work flow models.</p>
+<p><strong>Subversion-Style Workflow</strong><br /><img src="http://whygitisbetterthanx.com/images/workflow-a.png" /></p>
+<p><strong>Integration Manager Workflow</strong><br /><img src="http://whygitisbetterthanx.com/images/workflow-b.png" /></p>
+<p><strong>Dictator and Lieutenants Workflow</strong><br /><img src="http://whygitisbetterthanx.com/images/workflow-c.png" /></p>
+
+<p>The <a href="http://nvie.com/posts/a-successful-git-branching-model/">git flow</a> branching model works well for organizing parallel development of different parts of a project.</p>
 
 <img src="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png" />
-<h2>Clone this presentation</h2>
 
-<p>This presentation is a git repository: <a href="http://github.com/ksteinhoff/git-presentation">http://github.com/ksteinhoff/git-presentation</a></p>
+<h2>Resources</h2>
 
+<ul id="resources">
 
-<h2>gitprompt</h2>
+<li><a href="http://git-scm.com/">http://git-scm.com/</a></li>
+<li><a href="http://progit.org/book/">Pro Git Book</a></li>
+<li><a href="http://www.gitready.com/">git ready</a></li>
+<li><a href="http://whygitisbetterthanx.com/">Why Git is Better than X</a></li>
+<li>Clone this <a href="http://github.com/ksteinhoff/git-presentation">presentation<a/>: <code>git clone git://github.com/ksteinhoff/git-presentation.git</code></li>
 
-<p><a href="https://github.com/ksteinhoff/gitprompt">gitprompt</a> is a script that sets your PROMPT_COMMAND in bash to a function that displays useful information in your prompt about the current state of your working directory and staging area.</p>
-
+<li><a href="https://github.com/ksteinhoff/gitprompt">gitprompt</a> is a script that sets your PROMPT_COMMAND in bash to a function that displays useful information in your prompt about the current state of your working directory and staging area.</li>
+</ul>
 </body>
 </html>
